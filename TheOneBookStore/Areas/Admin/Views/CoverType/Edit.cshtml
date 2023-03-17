@@ -1,0 +1,29 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model CoverType
+<form method="post">
+    <div class="border p-4 mt-3">
+        <div class="row pb-2">
+            <h2 class="text-primary">
+                Edit CoverType
+            </h2>
+            <div class="mb-3">
+                <label asp-for="Name" ></label>
+                <input asp-for="Name" class="form-control"/>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            
+        </div>
+        <button class="btn btn-primary" style="width:150px" type="submit">
+            Save
+        </button>&nbsp;&nbsp;&nbsp;
+        <a asp-action="Index" asp-controller="CoverType" class="btn btn-primary" style="width:150px">Back to List</a>
+    </div>
+
+</form>
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial"></partial>
+    }
+}

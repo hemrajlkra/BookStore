@@ -1,0 +1,17 @@
+﻿@model int
+<div class="container row">
+    <div class="col-12 text-center">
+        <h1 class="text-primary text-center">
+            Payment Successfully
+            <br />
+            <span style="color:green">Order Id: @Model</span>
+        </h1>
+        <img src="https://goodluckhours.com/wp-content/uploads/2021/05/Payment-success.png" width="65%" />
+    </div>
+    <div class="col-12 text-center" style="color:green">
+        <br />
+        Your payment has been successful!!<br />
+        <a asp-area="Admin" asp-controller="order" asp-action="Details" asp-route-orderId="@Model"
+        class="btn btn-primary">Back to order details</a>
+    </div>
+</div>
